@@ -1,5 +1,5 @@
 <?php
-namespace OAuth2\GrantType;
+namespace PHPOAuth2\GrantType;
 
 /**
  * Client Credentials Parameters 

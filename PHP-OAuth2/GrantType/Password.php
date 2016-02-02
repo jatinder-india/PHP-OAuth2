@@ -1,19 +1,19 @@
 <?php
-namespace OAuth2\GrantType;
+namespace PHPOAuth2\GrantType;
 
-use OAuth2\InvalidArgumentException;
+use PHPOAuth2\InvalidArgumentException;
 
 /**
- * Authorization code  Grant Type Validator
+ * Password Parameters
  */
-class AuthorizationCode implements IGrantType
+class Password implements IGrantType
 {
     /**
      * Defines the Grant Type
      *
-     * @var string  Defaults to 'authorization_code'.
+     * @var string  Defaults to 'password'.
      */
-    const GRANT_TYPE = 'authorization_code';
+    const GRANT_TYPE = 'password';
 
     /**
      * Adds a specific Handling of the parameters
@@ -23,17 +23,17 @@ class AuthorizationCode implements IGrantType
      */
     public function validateParameters(&$parameters)
     {
-        if (!isset($parameters['code']))
+        if (!isset($parameters['username']))
         {
             throw new InvalidArgumentException(
-                'The \'code\' parameter must be defined for the Authorization Code grant type',
+                'The \'username\' parameter must be defined for the Password grant type',
                 InvalidArgumentException::MISSING_PARAMETER
             );
         }
-        elseif (!isset($parameters['redirect_uri']))
+        elseif (!isset($parameters['password']))
         {
             throw new InvalidArgumentException(
-                'The \'redirect_uri\' parameter must be defined for the Authorization Code grant type',
+                'The \'password\' parameter must be defined for the Password grant type',
                 InvalidArgumentException::MISSING_PARAMETER
             );
         }
