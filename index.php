@@ -346,13 +346,4 @@ if ( is_admin() ){
 	$php_oauth2_protocol = new PHPOAuthProtocol();
 }
 
-/* 
- * Retrieve this value with:
- * $php_oauth2_protocol_options = get_option( 'php_oauth2_protocol_option_name' ); // Array of All Options
- * $client_id_0 = $php_oauth2_protocol_options['client_id_0']; // Client ID
- * $client_secret_1 = $php_oauth2_protocol_options['client_secret_1']; // Client Secret
- * $redirect_uri_2 = $php_oauth2_protocol_options['redirect_uri_2']; // Redirect URI
- */
-
-
 ?>
